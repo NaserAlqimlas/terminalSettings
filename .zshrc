@@ -130,24 +130,5 @@ export PATH="/usr/local/opt/openjdk/bin:$PATH"
 # MySQL
 export PATH=${PATH}:/usr/local/mysql/bin/
 
-# Oracle WebLogic Server
-export JAVA_HOME=$(/usr/libexec/java_home)
-export USER_MEM_ARGS="-Xmx1024m"
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/nasser/.sdkman"
-[[ -s "/Users/nasser/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/nasser/.sdkman/bin/sdkman-init.sh"
-
-# JEnv
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
-
-# ensure that JAVA_HOME is correct
-jenv enable-plugin export
-# make Maven aware of the Java version in use (and switch when your project does)
-jenv enable-plugin maven
-
-export PATH="$HOME/.jenv/bin:$PATH"
-#eval "$(jenv init -)
-
-
+# used to fix and issue with macports
+export PATH=$PATH:/opt/local/bin
